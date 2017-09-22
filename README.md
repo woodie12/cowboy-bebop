@@ -76,5 +76,8 @@ Your webpage will have to implement the features listed below. Note that the exa
 4. Open a browser and go to `http://localhost:8080/` to view your page. You should see "Welcome to MP1!" at the top of the screen. Note that if for some reason your port 8080 is occupied, it will default to 8081.
 
 ## Submission Details
+Both part 1 and 2 needs to be done! Otherwise, we do not grade the MP.
 
-TBD
+1. Submit the your private repo for MP1 at uiucwp.com.
+2. Fill out submission form at ‘https://goo.gl/forms/nA2qNZ9ALp9btq0q2'
+

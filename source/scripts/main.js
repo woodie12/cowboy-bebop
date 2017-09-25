@@ -1,5 +1,3 @@
-console.log("Hello World!");
-
 
 //resizing the navgation bar 
 function make_smaller(){
@@ -11,7 +9,7 @@ function make_smaller(){
 	}else{
 		node.classList.remove("smaller");
 	}
-	 
+	
 }
 
 window.addEventListener("scroll", make_smaller);
@@ -45,11 +43,13 @@ document.addEventListener("DOMContentLoaded", function(){
 			next = next.offsetParent;
 			ret += next.offsetTop;
 	}
+	console.log("loc of history is "+ret);
 	var history = document.getElementById('hhist');
 	console.info("li is "+history);
 	console.info('hist');
 	history.addEventListener("click", function() {
 		  		var i = get_current_loc();
+		  		console.log("current loc is "+ i);
 		  		// var dist = (i < ret)?ret-i:i-ret;
 		  		// var spd = dist/20;
 				var interval = setInterval(function() {

@@ -11,7 +11,7 @@ function make_smaller(){
 	}else{
 		node.classList.remove("smaller");
 	}
-	
+	 
 }
 
 window.addEventListener("scroll", make_smaller);

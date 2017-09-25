@@ -34,7 +34,9 @@ function get_current_loc(){
 //wait for the DOM to be loaded
 document.addEventListener("DOMContentLoaded", function(){
 
-	var curr = document.getElementById('history');
+	var history = document.getElementById('hhist');
+	history.addEventListener("click", function() {
+		var curr = document.getElementById('history');
 	console.info("curr is "+ curr);
 	var ret = curr.offsetTop;
 	var next = curr; 
@@ -44,10 +46,9 @@ document.addEventListener("DOMContentLoaded", function(){
 			ret += next.offsetTop;
 	}
 	console.log("loc of history is "+ret);
-	var history = document.getElementById('hhist');
+	
 	console.info("li is "+history);
 	console.info('hist');
-	history.addEventListener("click", function() {
 		  		var i = get_current_loc();
 		  		console.log("current loc is "+ i);
 		  		// var dist = (i < ret)?ret-i:i-ret;
@@ -63,12 +64,15 @@ document.addEventListener("DOMContentLoaded", function(){
 					window.scrollTo(0, i);
 					if (i >= ret){ 
 						window.scrollTo(0, ret);
-						clearInterval(interval);}
+						console.log("scroll up"+ret);
+						clearInterval(interval);
+					}
 				}else {
 					i -= 80;
 					window.scrollTo(0, i);
 					if(i <= ret){
 						window.scrollTo(0, ret);
+						console.log("scroll to down"+ret);
 					 clearInterval(interval);
 					}
 				}
@@ -251,7 +255,7 @@ document.addEventListener("DOMContentLoaded", function(){
 			about.style.color= 'white';
 			history.style.color='white';
 		} 
-		else if(curr_loc+10>= about_loc && curr_loc < history_loc){
+		else if(curr_loc>= about_loc && curr_loc < history_loc){
 			
 			// console.log("enter "+about);
 			about.style.color='rgb(239, 169, 93)';
@@ -260,7 +264,7 @@ document.addEventListener("DOMContentLoaded", function(){
 		}
 		else if(curr_loc >= history_loc){
 			
-			// console.log("enter "+home);
+			console.info("enter "+history);
 			history.style.color='rgb(239, 169, 93)';
 			home.style.color= 'white';
 			about.style.color='white';

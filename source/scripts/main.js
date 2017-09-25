@@ -312,6 +312,7 @@ document.addEventListener("DOMContentLoaded", function(){
 	        console.log("hit none");
 	    }
 	    stopVideo();
+	    console.log("hit none outer");
 	}
 
 	var video1 = document.getElementById("faye");
@@ -333,9 +334,11 @@ document.addEventListener("DOMContentLoaded", function(){
 	
 	window.onclick = function(event) {
 	    if (event.target == mmodal) {
+	    	console.log("hit none kkk");
 	        mmodal.style.display = "none";
 	        stopVideo1();
 	    }
+	    console.log("ddddd");
 	}
 	var video2 = document.getElementById("ed");
      function stopVideo2(){
@@ -359,6 +362,7 @@ document.addEventListener("DOMContentLoaded", function(){
 	    if (event.target == mmmodal) {
 	        mmmodal.style.display = "none";
 	        stopVideo2();
+	        console.log("enter ed");
 	    }
 	}
 });

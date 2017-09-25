@@ -67,7 +67,7 @@ body{
 }
 
 .smaller{
-	height: 8%;
+	height: 7%;
 }
 
 
@@ -381,22 +381,43 @@ position: absolute;
 
 
 .content{
+	position:relative;
     background-color: rgba(255,255,255,0.8);
-    margin: 5% auto; /* 15% from the top and centered */
+    margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid black;
     width: 80%; /* Could be more or less, depending on screen size */
     height:80%;
+    z-index: -1;
 }
 
+.ed_video{
+	position:absolute;
+	top: 50%;
+	left:50%;
+	transform: translateX(-50%) translateY(-50%);
+}
 
+.faye_video {
+	position:absolute;
+	top: 50%;
+	left:50%;
+	transform: translateX(-50%) translateY(-50%);
 
+}
+
+.spike_video{
+	position:absolute;
+	top: 50%;
+	left:50%;
+	transform: translateX(-50%) translateY(-50%);
+
+}
 
 .close {
+	z-index: 998;
     color: #aaa;
     float:right;
-    margin-right: 5%;
-    margin-top:5%;
     font-size: 28px;
     font-weight: bold;
 }
@@ -409,10 +430,9 @@ position: absolute;
 }
 
 .close1 {
+	z-index: 998;
     color: #aaa;
     float:right;
-    margin-right: 5%;
-    margin-top:5%;
     font-size: 28px;
     font-weight: bold;
 }
@@ -420,16 +440,14 @@ position: absolute;
 .close1:hover,
 .close1:focus {
     color: black;
-    
     text-decoration: none;
     cursor: pointer;
 }
 
 .close2 {
+	z-index: 998;
     color: #aaa;
     float:right;
-    margin-top:5%;
-    margin-right:5%;
     font-size: 28px;
     font-weight: bold;
 }
